@@ -9,7 +9,7 @@ const AdminLogin = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/admin/login", {
+      const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/admin/login`, {
         username,
         password,
       });

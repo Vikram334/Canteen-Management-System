@@ -8,7 +8,7 @@ const ManageItems = () => {
   const token = localStorage.getItem("adminToken");
 
   const fetchItems = () => {
-    axios.get("http://localhost:8080/food-items")
+    axios.get(`${import.meta.env.VITE_API_BASE_URL}/food-items`)
       .then(res => setItems(res.data));
   };
 
@@ -17,7 +17,7 @@ const ManageItems = () => {
   }, []);
 
   const handleAdd = () => {
-    axios.post("http://localhost:8080/admin/add-item", form, {
+    axios.post(`${import.meta.env.VITE_API_BASE_URL}/admin/add-item`, form, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(() => {
@@ -27,7 +27,7 @@ const ManageItems = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8080/admin/delete-item/${id}`, {
+    axios.delete(`${import.meta.env.VITE_API_BASE_URL}/admin/delete-item/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     }).then(fetchItems);
   };

@@ -6,7 +6,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
-    axios.get("http://localhost:8080/admin/orders", {
+    axios.get(`${import.meta.env.VITE_API_BASE_URL}/orders`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => setOrders(res.data))
