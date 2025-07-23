@@ -40,10 +40,10 @@ const LoginPage = ({ onLoginSuccess }) => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:8080/login", {
-        student_id,
-        password
-      });
+const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+  student_id,
+  password
+});
 
       localStorage.setItem("token",       res.data.token);
       localStorage.setItem("student_id",  res.data.user.student_id);
