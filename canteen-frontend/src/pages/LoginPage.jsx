@@ -40,7 +40,7 @@ const LoginPage = ({ onLoginSuccess }) => {
     setError("");
 
     try {
-const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/login`, {
   student_id,
   password
 });
