@@ -465,6 +465,7 @@ const styles = {
     transition: "all 0.3s ease",
     outline: "none",
     fontFamily: "'Inter', sans-serif",
+    color: "#1f2937",
   },
 
   select: {
@@ -478,6 +479,7 @@ const styles = {
     outline: "none",
     fontFamily: "'Inter', sans-serif",
     cursor: "pointer",
+    color: "#1f2937",
   },
 
   passwordContainer: {
@@ -498,6 +500,7 @@ const styles = {
     fontFamily: "'Inter', sans-serif",
     width: "100%",
     boxSizing: "border-box",
+    color: "#1f2937",
   },
 
   passwordToggle: {
